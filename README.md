@@ -33,3 +33,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
                                             }
                                               });
                                               });-
+
+
+
+https://developer.chrome.com/apps/app_identity
