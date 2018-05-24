@@ -1,0 +1,36 @@
+
+{
+  "manifest_version": 2,
+  "name": "Borderify",
+  "version": "1.0",
+  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "permissions": [
+    "*://developer.mozilla.org/*",
+    "webRequest",
+    "activeTab",
+    "tabs",
+    "bookmarks"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mozilla.org/*"
+      ],
+      "js": [
+        "borderify.js"
+      ]
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "borderify@example.com"
+    }
+  },
+  "icons": {
+    "48": "icons/border-48.png",
+    "96": "icons/border-96.png"
+  }
+}
