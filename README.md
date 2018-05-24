@@ -37,3 +37,4 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 
 https://developer.chrome.com/apps/app_identity
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
