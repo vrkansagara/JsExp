@@ -6,9 +6,46 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-	<script src="assets/js/Base.js"></script>
+    <script src="assets/js/Base.js"></script>
+    <script src="assets/jquery-3.3.1.min.js"></script>
+
 </head>
-<body>
+<body id="body">
+
+<div class="container">
+    <div class="row">
+        <h1 class="green">Hello Vallabh</h1>
+        <a id="homePage">Home Page</a> <br>
+        <a id="socialIcon">Social</a>
+    </div>
+</div>
+
+<script>
+    // debugger;
+
+    (function ($) {
+        // Your jQuery code here, using the $
+        console.log('Priority : 1 = (function ($){})(jQuery); <= immediately-invoked function expression.');
+    })(jQuery);
+
+
+    $(window).on("load", function () {
+        console.log('Priority : 2 = $(window).on("load", function () {});');
+    });
+
+    $(function () {
+        console.log('Priority : 3 = $(function () {});    <= Called as document ready');
+        $("a").attr(
+            {
+                title: "Vallabh Kansagara Home page.",
+                href: "https://vrkansagara.in",
+                target: "_blank"
+            }
+        );
+    });
+
+
+</script>
 
 </body>
 </html>
